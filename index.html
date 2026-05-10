@@ -12,6 +12,7 @@
   <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
   <header class="site-header">
     <div class="header-left">
+      <a href="index.html" class="logo-link">
       <div class="logo-wrap">
         <img src="anc-emblem.png" class="anc-shield-img" alt="ANC Education Emblem" />
 
@@ -21,6 +22,7 @@
           <span class="logo-edu-text">EDUCATION</span>
         </div>
       </div>
+      </a>
 
       <div class="header-portal-sep"></div>
       <span class="header-portal-label">Student Portal</span>
@@ -69,21 +71,30 @@
   <nav class="main-nav">
     <div class="nav-inner">
 
+      <div class="nav-item">
+        <a href="index.html" class="nav-link active">Home</a>
+      </div>
+
       <div class="nav-item has-dropdown">
-        <button class="nav-link active">
+        <button class="nav-link">
           Academic
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="dropdown nav-dropdown">
-          <a href="#" class="dropdown-item">Course Enrollment</a>
-          <a href="#" class="dropdown-item">Academic Records</a>
-          <a href="#" class="dropdown-item">Transcript Request</a>
-          <a href="#" class="dropdown-item">Attendance</a>
+          <a href="pages/registration-status.html" class="dropdown-item">Registration</a>
+          <a href="pages/my-tasks.html" class="dropdown-item">General</a>
+          <a href="pages/my-tasks.html" class="dropdown-item">Notices</a>
         </div>
       </div>
 
-      <div class="nav-item">
-        <button class="nav-link">Reports</button>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">
+          Reports
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown nav-dropdown">
+          <a href="pages/registration-status.html" class="dropdown-item">Registration Reports</a>
+        </div>
       </div>
 
       <div class="nav-item has-dropdown">
@@ -92,9 +103,11 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="dropdown nav-dropdown">
-          <a href="#" class="dropdown-item">Personal Info</a>
-          <a href="#" class="dropdown-item">Documents</a>
-          <a href="#" class="dropdown-item">Contact Details</a>
+          <a href="#" class="dropdown-item">My Information</a>
+          <a href="pages/semester-calendar.html" class="dropdown-item">My Semester Calendar</a>
+          <a href="pages/attendance.html" class="dropdown-item">My Attendance</a>
+          <a href="pages/apr.html" class="dropdown-item">My APR</a>
+          <a href="pages/dcp.html" class="dropdown-item">My DCP</a>
         </div>
       </div>
 
@@ -104,9 +117,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="dropdown nav-dropdown">
-          <a href="#" class="dropdown-item">Subjects</a>
-          <a href="#" class="dropdown-item">Results</a>
-          <a href="#" class="dropdown-item">GPA Calculator</a>
+          <a href="pages/course-schedule.html" class="dropdown-item">Course Schedule</a>
+          <a href="pages/timetable.html" class="dropdown-item">My Course Time Table</a>
+          <a href="pages/registration-status.html" class="dropdown-item">Registration Status</a>
+          <a href="pages/feedback.html" class="dropdown-item">Provide Feedback</a>
         </div>
       </div>
 
@@ -116,8 +130,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="dropdown nav-dropdown">
+          <a href="pages/exam-ticket.html" class="dropdown-item">Exam Ticket</a>
           <a href="#" class="dropdown-item">Exam Schedule</a>
-          <a href="#" class="dropdown-item">Hall Ticket</a>
           <a href="#" class="dropdown-item">Results</a>
         </div>
       </div>
@@ -128,9 +142,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="dropdown nav-dropdown">
-          <a href="#" class="dropdown-item">Browse Catalog</a>
-          <a href="#" class="dropdown-item">My Borrowed Books</a>
-          <a href="#" class="dropdown-item">Reservations</a>
+          <a href="pages/book-search.html" class="dropdown-item">Book Search</a>
+          <a href="pages/request-book.html" class="dropdown-item">Request a Book</a>
+          <a href="pages/transaction-history.html" class="dropdown-item">My Transaction History</a>
         </div>
       </div>
 
@@ -140,10 +154,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="dropdown nav-dropdown">
-          <a href="#" class="dropdown-item">Fee Structure</a>
-          <a href="#" class="dropdown-item">Payment History</a>
-          <a href="#" class="dropdown-item">Invoices</a>
-          <a href="#" class="dropdown-item">Online Payment</a>
+          <a href="pages/invoices.html" class="dropdown-item">Invoices on Due</a>
+          <a href="pages/payments.html" class="dropdown-item">Payments</a>
         </div>
       </div>
 

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My DCP — ANC Student Portal</title>
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="page.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="../index.html" class="logo-link">
+        <div class="logo-wrap">
+          <img src="../anc-emblem.png" class="anc-shield-img" alt="ANC Education Emblem"/>
+          <div class="logo-name-block">
+            <span class="logo-anc-text">ANC</span>
+            <div class="logo-rule"></div>
+            <span class="logo-edu-text">EDUCATION</span>
+          </div>
+        </div>
+      </a>
+      <div class="header-portal-sep"></div>
+      <span class="header-portal-label">Student Portal</span>
+    </div>
+    <div class="header-right">
+      <button class="icon-btn" id="notifBtn" title="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="badge">3</span>
+      </button>
+      <div class="user-info" id="profileBtn">
+        <div class="avatar">SA</div>
+        <div class="user-text">
+          <span class="user-name">Sandali Anuththara</span>
+          <span class="user-role">Student</span>
+        </div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="dropdown profile-dropdown" id="profileDropdown">
+      <a href="../index.html" class="dropdown-item">Home</a>
+      <a href="#" class="dropdown-item">Change Password</a>
+      <a href="payments.html" class="dropdown-item">Online Payments</a>
+      <div class="dropdown-divider"></div>
+      <a href="#" class="dropdown-item dropdown-item--danger">Sign Out</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <div class="nav-item"><a href="../index.html" class="nav-link">Home</a></div>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Academic <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown nav-dropdown">
+          <a href="registration-status.html" class="dropdown-item">Registration</a>
+          <a href="my-tasks.html" class="dropdown-item">General</a>
+          <a href="my-tasks.html" class="dropdown-item">Notices</a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Reports <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown nav-dropdown">
+          <a href="registration-status.html" class="dropdown-item">Registration Reports</a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link active">My Profile <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown nav-dropdown">
+          <a href="#" class="dropdown-item">My Information</a>
+          <a href="semester-calendar.html" class="dropdown-item">My Semester Calendar</a>
+          <a href="attendance.html" class="dropdown-item">My Attendance</a>
+          <a href="apr.html" class="dropdown-item">My APR</a>
+          <a href="dcp.html" class="dropdown-item">My DCP</a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Academics <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown nav-dropdown">
+          <a href="course-schedule.html" class="dropdown-item">Course Schedule</a>
+          <a href="timetable.html" class="dropdown-item">My Course Time Table</a>
+          <a href="registration-status.html" class="dropdown-item">Registration Status</a>
+          <a href="feedback.html" class="dropdown-item">Provide Feedback</a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Exams <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown nav-dropdown">
+          <a href="exam-ticket.html" class="dropdown-item">Exam Ticket</a>
+          <a href="#" class="dropdown-item">Exam Schedule</a>
+          <a href="#" class="dropdown-item">Results</a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Library <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown nav-dropdown">
+          <a href="book-search.html" class="dropdown-item">Book Search</a>
+          <a href="request-book.html" class="dropdown-item">Request a Book</a>
+          <a href="transaction-history.html" class="dropdown-item">My Transaction History</a>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">Finance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown nav-dropdown">
+          <a href="invoices.html" class="dropdown-item">Invoices on Due</a>
+          <a href="payments.html" class="dropdown-item">Payments</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <div class="page-title-bar">
+      <span class="page-breadcrumb">My Profile <span class="bc-sep">›</span> My DCP</span>
+      <div class="page-actions">
+        <button class="page-icon-btn" title="Print"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+      </div>
+    </div>
+    <div class="page-card">
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:14px;display:flex;gap:24px;flex-wrap:wrap;">
+        <span>Student Reg. No – 00008888</span>
+        <span>Student: Welweriya</span>
+        <span>Completed Credits – 0</span>
+        <span>Current Sem – 0</span>
+        <span>Cumulative GPA – 0</span>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width:32px"></th>
+            <th>Course</th>
+            <th>Course Description</th>
+            <th>Credits</th>
+            <th>Semester</th>
+            <th>Planned Semester</th>
+            <th>Grade</th>
+            <th>Exemption</th>
+            <th>Subject Type</th>
+            <th>Exam Attempts</th>
+            <th>Course Completion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tr-group"><td colspan="11">University – AN</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP011</td><td>English I</td><td>0</td><td>SEM12021</td><td></td><td>D</td><td>No</td><td>NR</td><td>0</td><td>Yes</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP012</td><td>English II</td><td>0</td><td>SEM22021</td><td></td><td>N</td><td>No</td><td>NR</td><td>0</td><td>No</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP021</td><td>Accounting I</td><td>0</td><td>SEM22021</td><td></td><td>N</td><td>No</td><td>NR</td><td>0</td><td>Yes</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP022</td><td>Accounting II</td><td>0</td><td></td><td></td><td></td><td>No</td><td>NR</td><td>0</td><td>No</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP031</td><td>Biology I</td><td>0</td><td></td><td></td><td></td><td>No</td><td>EL</td><td>0</td><td>No</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP032</td><td>Biology II</td><td>0</td><td></td><td></td><td></td><td>No</td><td>EL</td><td>0</td><td>No</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP041</td><td>Chemistry I</td><td>0</td><td></td><td></td><td></td><td>No</td><td>EL</td><td>0</td><td>No</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP051</td><td>ICT I</td><td>0</td><td></td><td></td><td></td><td>No</td><td>EL</td><td>0</td><td>No</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP052</td><td>ICT II</td><td>0</td><td></td><td></td><td></td><td>No</td><td>EL</td><td>0</td><td>No</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP061</td><td>Economics I</td><td>0</td><td>SEM22021</td><td></td><td>N</td><td>No</td><td>NR</td><td>0</td><td>Yes</td></tr>
+          <tr><td><input type="checkbox"/></td><td>UFP062</td><td>Economics II</td><td>0</td><td></td><td></td><td></td><td>No</td><td>NR</td><td>0</td><td>No</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <script src="../script.js"></script>
+</body>
+</html>
