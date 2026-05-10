@@ -70,12 +70,13 @@ svg { display: block; flex-shrink: 0; }
   gap: 12px;
 }
 
-/* SVG shield */
-.anc-shield-svg {
-  width: 52px;
-  height: 62px;
+/* Emblem image */
+.anc-shield-img {
+  width: 58px;
+  height: 68px;
+  object-fit: contain;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,.35));
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.5));
 }
 
 /* ANC / rule / EDUCATION block */
