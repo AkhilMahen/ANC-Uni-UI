@@ -181,20 +181,44 @@
     </div>
   </div>
 
-  <!-- ═══════════════════════════════ MAIN CONTENT ═══════════════════════ -->
-  <main class="dashboard">
-
-    <!-- Greeting Banner -->
-    <div class="greeting-bar">
-      <div>
-        <h1 class="greeting-title">Good afternoon, Sandali 👋</h1>
-        <p class="greeting-sub">Semester SEM2024 · Wednesday, 7 May 2026</p>
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <div class="hero-section">
+    <div class="hero-geo hero-geo-1"></div>
+    <div class="hero-geo hero-geo-2"></div>
+    <div class="hero-geo hero-geo-3"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-eyebrow">Welcome back</p>
+        <h1 class="hero-name" id="heroGreeting">Good afternoon, Sandali</h1>
+        <p class="hero-meta">
+          BSc Computer Science &nbsp;·&nbsp; Year 2
+          <span class="hero-sem-badge">SEM2024 Active</span>
+        </p>
+        <p class="hero-date" id="heroDate"></p>
       </div>
-      <div class="semester-chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        SEM2024 Active
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-val">3.8</span>
+          <span class="hstat-lbl">Current GPA</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-val">72</span>
+          <span class="hstat-lbl">Credits Done</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-val">3</span>
+          <span class="hstat-lbl">Upcoming Exams</span>
+        </div>
+        <div class="hstat">
+          <span class="hstat-val">5</span>
+          <span class="hstat-lbl">New Notices</span>
+        </div>
       </div>
     </div>
+  </div>
+
+  <!-- ═══════════════════════════════ MAIN CONTENT ═══════════════════════ -->
+  <main class="dashboard">
 
     <!-- 3-column grid -->
     <div class="dashboard-grid">
@@ -281,55 +305,112 @@
 
       <!-- ── CENTER COLUMN (Quick Actions) ── -->
       <section class="center-col">
-        <h2 class="section-title">Quick Actions</h2>
+        <div class="section-heading">
+          <h2 class="section-heading-text">Quick Actions</h2>
+          <div class="section-heading-line"></div>
+        </div>
         <div class="quick-grid">
 
-          <a href="#" class="quick-card">
-            <div class="quick-icon" style="--clr:#1a3a6b;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <a href="#" class="quick-tile" style="--ta:#0d1b52;--tb:#152166">
+            <div class="tile-top">
+              <div class="tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
             </div>
-            <span class="quick-label">Course Schedule</span>
-            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <div class="tile-body">
+              <span class="tile-label">Course Schedule</span>
+              <span class="tile-desc">View your weekly class timetable</span>
+            </div>
+            <div class="tile-footer">
+              <div class="tile-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
           </a>
 
-          <a href="#" class="quick-card">
-            <div class="quick-icon" style="--clr:#c8820a;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+          <a href="#" class="quick-tile" style="--ta:#7a4800;--tb:#c8820a">
+            <div class="tile-top">
+              <div class="tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+              </div>
             </div>
-            <span class="quick-label">Exam Time-Table</span>
-            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <div class="tile-body">
+              <span class="tile-label">Exam Time-Table</span>
+              <span class="tile-desc">See upcoming examination slots</span>
+            </div>
+            <div class="tile-footer">
+              <div class="tile-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
           </a>
 
-          <a href="#" class="quick-card">
-            <div class="quick-icon" style="--clr:#156b3a;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <a href="#" class="quick-tile" style="--ta:#0b4a28;--tb:#157848">
+            <div class="tile-top">
+              <div class="tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
             </div>
-            <span class="quick-label">Pre-Registration</span>
-            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <div class="tile-body">
+              <span class="tile-label">Pre-Registration</span>
+              <span class="tile-desc">Register for next semester early</span>
+            </div>
+            <div class="tile-footer">
+              <div class="tile-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
           </a>
 
-          <a href="#" class="quick-card">
-            <div class="quick-icon" style="--clr:#8b2252;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <a href="#" class="quick-tile" style="--ta:#6a0e28;--tb:#a01e40">
+            <div class="tile-top">
+              <div class="tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
             </div>
-            <span class="quick-label">Invoices on Due</span>
-            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <div class="tile-body">
+              <span class="tile-label">Invoices on Due</span>
+              <span class="tile-desc">Check outstanding fee payments</span>
+            </div>
+            <div class="tile-footer">
+              <div class="tile-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
           </a>
 
-          <a href="#" class="quick-card">
-            <div class="quick-icon" style="--clr:#5c3d9e;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          <a href="#" class="quick-tile" style="--ta:#3a1e80;--tb:#5c3db0">
+            <div class="tile-top">
+              <div class="tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </div>
             </div>
-            <span class="quick-label">Payment History</span>
-            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <div class="tile-body">
+              <span class="tile-label">Payment History</span>
+              <span class="tile-desc">View all your past transactions</span>
+            </div>
+            <div class="tile-footer">
+              <div class="tile-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
           </a>
 
-          <a href="#" class="quick-card">
-            <div class="quick-icon" style="--clr:#b04a0a;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <a href="#" class="quick-tile" style="--ta:#7a2e00;--tb:#b85200">
+            <div class="tile-top">
+              <div class="tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
             </div>
-            <span class="quick-label">Provide Feedback</span>
-            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <div class="tile-body">
+              <span class="tile-label">Provide Feedback</span>
+              <span class="tile-desc">Share your campus experience</span>
+            </div>
+            <div class="tile-footer">
+              <div class="tile-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
           </a>
 
         </div>

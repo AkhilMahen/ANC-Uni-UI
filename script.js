@@ -96,34 +96,31 @@
   });
 
   /* ══════════════════════════════════════════════════════
-     GREETING — time-of-day
+     HERO — time-of-day greeting + live date
      ══════════════════════════════════════════════════════ */
-  const greetingTitle = $(".greeting-title");
-  if (greetingTitle) {
-    const hour = new Date().getHours();
-    const name = "Sandali";
-    let timeGreet = "Good morning";
-    if (hour >= 12 && hour < 17) timeGreet = "Good afternoon";
-    else if (hour >= 17) timeGreet = "Good evening";
-    greetingTitle.textContent = `${timeGreet}, ${name} 👋`;
-  }
+  const now    = new Date();
+  const hour   = now.getHours();
+  const name   = "Sandali";
+  const days   = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-  /* ══════════════════════════════════════════════════════
-     LIVE DATE in greeting bar
-     ══════════════════════════════════════════════════════ */
-  const greetingSub = $(".greeting-sub");
-  if (greetingSub) {
-    const now   = new Date();
-    const days  = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    const months= ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  let timeGreet = "Good morning";
+  if (hour >= 12 && hour < 17) timeGreet = "Good afternoon";
+  else if (hour >= 17)          timeGreet = "Good evening";
+
+  const heroGreeting = $("#heroGreeting");
+  if (heroGreeting) heroGreeting.textContent = `${timeGreet}, ${name}`;
+
+  const heroDate = $("#heroDate");
+  if (heroDate) {
     const dayStr = `${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
-    greetingSub.textContent = `Semester SEM2024  ·  ${dayStr}`;
+    heroDate.textContent = dayStr;
   }
 
   /* ══════════════════════════════════════════════════════
      QUICK CARD — ripple effect on click
      ══════════════════════════════════════════════════════ */
-  $$(".quick-card").forEach(card => {
+  $$(".quick-tile").forEach(card => {
     card.addEventListener("click", function (e) {
       const ripple = document.createElement("span");
       const rect   = this.getBoundingClientRect();
