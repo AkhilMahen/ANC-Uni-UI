@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ANC Education — Student Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-left">
+      <div class="logo-wrap">
+        <!-- ANC Shield SVG — matches the uploaded logo -->
+        <svg class="anc-shield-svg" viewBox="0 0 72 86" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="sc">
+              <path d="M36 83C36 83 4 62 4 36V8C4 5.8 5.8 4 8 4H64C66.2 4 68 5.8 68 8V36C68 62 36 83 36 83Z"/>
+            </clipPath>
+          </defs>
+          <!-- Top-left quadrant: deep navy -->
+          <rect x="4" y="4" width="32" height="44" fill="#152166" clip-path="url(#sc)"/>
+          <!-- Top-right quadrant: crimson red -->
+          <rect x="36" y="4" width="32" height="44" fill="#b71c1c" clip-path="url(#sc)"/>
+          <!-- Bottom section: mid blue -->
+          <rect x="4" y="48" width="64" height="39" fill="#1a56a0" clip-path="url(#sc)"/>
+          <!-- White horizontal stripes in bottom -->
+          <rect x="4" y="55" width="64" height="5"  fill="rgba(255,255,255,0.38)" clip-path="url(#sc)"/>
+          <rect x="4" y="64" width="64" height="5"  fill="rgba(255,255,255,0.38)" clip-path="url(#sc)"/>
+          <!-- Gold cross dividers -->
+          <line x1="36" y1="4"  x2="36" y2="83" stroke="#D4A820" stroke-width="2"   clip-path="url(#sc)"/>
+          <line x1="4"  y1="48" x2="68" y2="48" stroke="#D4A820" stroke-width="2"   clip-path="url(#sc)"/>
+          <!-- LION (simplified rampant) — top-left -->
+          <!-- Mane ring -->
+          <circle cx="21" cy="15" r="9"   fill="#b8901e" clip-path="url(#sc)"/>
+          <!-- Head -->
+          <circle cx="21" cy="15" r="7"   fill="#D4A820" clip-path="url(#sc)"/>
+          <!-- Eye -->
+          <circle cx="23" cy="13" r="1.4" fill="#152166"  clip-path="url(#sc)"/>
+          <!-- Body (oval, rampant tilt) -->
+          <ellipse cx="17" cy="31" rx="7" ry="10" fill="#D4A820" transform="rotate(-12 17 31)" clip-path="url(#sc)"/>
+          <!-- Raised front paw -->
+          <path d="M26 22 Q33 15 29 9" stroke="#D4A820" stroke-width="4" stroke-linecap="round" fill="none" clip-path="url(#sc)"/>
+          <!-- Rear leg -->
+          <path d="M13 40 Q9 47 7 44"   stroke="#D4A820" stroke-width="3.5" stroke-linecap="round" fill="none" clip-path="url(#sc)"/>
+          <!-- Tail curl -->
+          <path d="M11 27 Q3 19 6 11 Q8 6 13 11" stroke="#D4A820" stroke-width="2.5" stroke-linecap="round" fill="none" clip-path="url(#sc)"/>
+          <!-- TENT / BUILDING — top-right (simplified) -->
+          <polygon points="54,11 44,46 64,46"        fill="rgba(255,225,110,0.55)" clip-path="url(#sc)"/>
+          <rect x="49" y="30" width="10" height="16" fill="rgba(255,200,80,0.45)"  clip-path="url(#sc)"/>
+          <!-- Stars (Southern Cross) -->
+          <text x="36" y="73" text-anchor="middle" font-size="7" fill="white" letter-spacing="4" clip-path="url(#sc)">★ ★ ★</text>
+          <!-- Banner -->
+          <rect x="8"  y="77" width="56" height="10" rx="2" fill="#D4A820" clip-path="url(#sc)"/>
+          <text x="36" y="84.5" text-anchor="middle" font-size="4.2" fill="#152166" font-weight="bold" font-family="Arial,sans-serif" letter-spacing="0.4" clip-path="url(#sc)">DISCE UT DUCAS</text>
+          <!-- Shield outer border -->
+          <path d="M36 83C36 83 4 62 4 36V8C4 5.8 5.8 4 8 4H64C66.2 4 68 5.8 68 8V36C68 62 36 83 36 83Z" fill="none" stroke="#D4A820" stroke-width="2.5"/>
+        </svg>
+
+        <div class="logo-name-block">
+          <span class="logo-anc-text">ANC</span>
+          <div class="logo-rule"></div>
+          <span class="logo-edu-text">EDUCATION</span>
+        </div>
+      </div>
+
+      <div class="header-portal-sep"></div>
+      <span class="header-portal-label">Student Portal</span>
+    </div>
+
+    <div class="header-right">
+      <button class="icon-btn" id="notifBtn" title="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="badge">3</span>
+      </button>
+      <button class="icon-btn" title="Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+      <div class="user-profile" id="userMenuBtn">
+        <div class="avatar">SA</div>
+        <div class="user-info">
+          <span class="user-name">Sandali Anuththara</span>
+          <span class="user-role">BSc Computer Science</span>
+        </div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+
+        <div class="dropdown user-dropdown" id="userDropdown">
+          <a href="#" class="dropdown-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Home
+          </a>
+          <a href="#" class="dropdown-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Change Password
+          </a>
+          <a href="#" class="dropdown-item accent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Online Payments
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item danger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Sign Out
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav class="main-nav">
+    <div class="nav-inner">
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link active">
+          Academic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown nav-dropdown">
+          <a href="#" class="dropdown-item">Course Enrollment</a>
+          <a href="#" class="dropdown-item">Academic Records</a>
+          <a href="#" class="dropdown-item">Transcript Request</a>
+          <a href="#" class="dropdown-item">Attendance</a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-link">Reports</button>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">
+          My Profile
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown nav-dropdown">
+          <a href="#" class="dropdown-item">Personal Info</a>
+          <a href="#" class="dropdown-item">Documents</a>
+          <a href="#" class="dropdown-item">Contact Details</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">
+          Academics
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown nav-dropdown">
+          <a href="#" class="dropdown-item">Subjects</a>
+          <a href="#" class="dropdown-item">Results</a>
+          <a href="#" class="dropdown-item">GPA Calculator</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">
+          Exams
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown nav-dropdown">
+          <a href="#" class="dropdown-item">Exam Schedule</a>
+          <a href="#" class="dropdown-item">Hall Ticket</a>
+          <a href="#" class="dropdown-item">Results</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">
+          Library
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown nav-dropdown">
+          <a href="#" class="dropdown-item">Browse Catalog</a>
+          <a href="#" class="dropdown-item">My Borrowed Books</a>
+          <a href="#" class="dropdown-item">Reservations</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <button class="nav-link">
+          Finance
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown nav-dropdown">
+          <a href="#" class="dropdown-item">Fee Structure</a>
+          <a href="#" class="dropdown-item">Payment History</a>
+          <a href="#" class="dropdown-item">Invoices</a>
+          <a href="#" class="dropdown-item">Online Payment</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ NOTIFICATION PANEL ═══════════════════ -->
+  <div class="notif-panel" id="notifPanel">
+    <div class="notif-header">
+      <span>Notifications</span>
+      <button class="mark-all-read">Mark all read</button>
+    </div>
+    <div class="notif-list">
+      <div class="notif-item unread">
+        <div class="notif-dot"></div>
+        <div class="notif-body">
+          <p>Final Registration deadline: <strong>Sep 1</strong></p>
+          <span class="notif-time">2 hours ago</span>
+        </div>
+      </div>
+      <div class="notif-item unread">
+        <div class="notif-dot"></div>
+        <div class="notif-body">
+          <p>New exam timetable published</p>
+          <span class="notif-time">Yesterday</span>
+        </div>
+      </div>
+      <div class="notif-item unread">
+        <div class="notif-dot"></div>
+        <div class="notif-body">
+          <p>Invoice #INV-2024-089 is due</p>
+          <span class="notif-time">2 days ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ MAIN CONTENT ═══════════════════════ -->
+  <main class="dashboard">
+
+    <!-- Greeting Banner -->
+    <div class="greeting-bar">
+      <div>
+        <h1 class="greeting-title">Good afternoon, Sandali 👋</h1>
+        <p class="greeting-sub">Semester SEM2024 · Wednesday, 7 May 2026</p>
+      </div>
+      <div class="semester-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        SEM2024 Active
+      </div>
+    </div>
+
+    <!-- 3-column grid -->
+    <div class="dashboard-grid">
+
+      <!-- ── LEFT COLUMN ── -->
+      <aside class="left-col">
+
+        <!-- Notice Board -->
+        <div class="card notice-card">
+          <div class="card-header notice-header">
+            <div class="card-header-icon notice-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h2 class="card-title">Notice Board</h2>
+            <a href="#" class="view-all-link">View All</a>
+          </div>
+          <div class="card-body">
+            <div class="notice-item">
+              <span class="notice-dot new"></span>
+              <div class="notice-text">
+                <p>Please use the following link to pay online:</p>
+                <a href="https://www.ancedu.com" class="notice-link">www.ancedu.com</a>
+              </div>
+            </div>
+            <div class="notice-item">
+              <span class="notice-dot"></span>
+              <div class="notice-text">
+                <p>Add/Drop period ends <strong>Aug 15</strong> — submit requests promptly.</p>
+              </div>
+            </div>
+            <div class="notice-item">
+              <span class="notice-dot"></span>
+              <div class="notice-text">
+                <p>Library will be closed on public holidays this month.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alarm / Reminders -->
+        <div class="card alarm-card">
+          <div class="card-header alarm-header">
+            <div class="card-header-icon alarm-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3L2 6"/><path d="M22 6l-3-3"/><path d="M6.38 18.7L4 21"/><path d="M17.64 18.67L20 21"/></svg>
+            </div>
+            <h2 class="card-title">Alarm</h2>
+            <a href="#" class="view-all-link">View All</a>
+          </div>
+          <div class="card-body">
+            <div class="alarm-item">
+              <div class="alarm-date">
+                <span class="alarm-day">15</span>
+                <span class="alarm-month">Aug</span>
+              </div>
+              <div class="alarm-detail">
+                <p class="alarm-title">Add/Drop Deadline</p>
+                <span class="alarm-tag urgent">Urgent</span>
+              </div>
+            </div>
+            <div class="alarm-item">
+              <div class="alarm-date">
+                <span class="alarm-day">01</span>
+                <span class="alarm-month">Sep</span>
+              </div>
+              <div class="alarm-detail">
+                <p class="alarm-title">Final Registration</p>
+                <span class="alarm-tag upcoming">Upcoming</span>
+              </div>
+            </div>
+            <div class="alarm-item">
+              <div class="alarm-date">
+                <span class="alarm-day">20</span>
+                <span class="alarm-month">Sep</span>
+              </div>
+              <div class="alarm-detail">
+                <p class="alarm-title">Pre-Registration Opens</p>
+                <span class="alarm-tag info">Info</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ── CENTER COLUMN (Quick Actions) ── -->
+      <section class="center-col">
+        <h2 class="section-title">Quick Actions</h2>
+        <div class="quick-grid">
+
+          <a href="#" class="quick-card">
+            <div class="quick-icon" style="--clr:#1a3a6b;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <span class="quick-label">Course Schedule</span>
+            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <a href="#" class="quick-card">
+            <div class="quick-icon" style="--clr:#c8820a;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+            </div>
+            <span class="quick-label">Exam Time-Table</span>
+            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <a href="#" class="quick-card">
+            <div class="quick-icon" style="--clr:#156b3a;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </div>
+            <span class="quick-label">Pre-Registration</span>
+            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <a href="#" class="quick-card">
+            <div class="quick-icon" style="--clr:#8b2252;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <span class="quick-label">Invoices on Due</span>
+            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <a href="#" class="quick-card">
+            <div class="quick-icon" style="--clr:#5c3d9e;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <span class="quick-label">Payment History</span>
+            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <a href="#" class="quick-card">
+            <div class="quick-icon" style="--clr:#b04a0a;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <span class="quick-label">Provide Feedback</span>
+            <svg class="quick-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ── RIGHT COLUMN (Semester Calendar) ── -->
+      <aside class="right-col">
+        <div class="card calendar-card">
+          <div class="card-header calendar-header">
+            <div class="card-header-icon calendar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h2 class="card-title">Semester Calendar</h2>
+          </div>
+          <div class="card-body">
+
+            <div class="cal-event">
+              <div class="cal-dates">
+                <div class="cal-date-badge">
+                  <span class="cdb-day">1</span>
+                  <span class="cdb-mon">Aug</span>
+                </div>
+                <div class="cal-date-badge secondary">
+                  <span class="cdb-day">1</span>
+                  <span class="cdb-mon">Sep</span>
+                </div>
+              </div>
+              <div class="cal-event-info">
+                <p class="cal-event-name">Inter Program Change</p>
+                <span class="cal-tag blue">SEM2024</span>
+              </div>
+            </div>
+
+            <div class="cal-event">
+              <div class="cal-dates">
+                <div class="cal-date-badge">
+                  <span class="cdb-day">1</span>
+                  <span class="cdb-mon">Aug</span>
+                </div>
+                <div class="cal-date-badge secondary">
+                  <span class="cdb-day">1</span>
+                  <span class="cdb-mon">Sep</span>
+                </div>
+              </div>
+              <div class="cal-event-info">
+                <p class="cal-event-name">Final Registration</p>
+                <span class="cal-tag gold">SEM2024</span>
+              </div>
+            </div>
+
+            <div class="cal-event">
+              <div class="cal-dates">
+                <div class="cal-date-badge">
+                  <span class="cdb-day">1</span>
+                  <span class="cdb-mon">Aug</span>
+                </div>
+                <div class="cal-date-badge secondary">
+                  <span class="cdb-day">1</span>
+                  <span class="cdb-mon">Sep</span>
+                </div>
+              </div>
+              <div class="cal-event-info">
+                <p class="cal-event-name">Add / Drop Period</p>
+                <span class="cal-tag blue">SEM2024</span>
+              </div>
+            </div>
+
+            <div class="cal-event">
+              <div class="cal-dates">
+                <div class="cal-date-badge">
+                  <span class="cdb-day">1</span>
+                  <span class="cdb-mon">Aug</span>
+                </div>
+                <div class="cal-date-badge secondary">
+                  <span class="cdb-day">1</span>
+                  <span class="cdb-mon">Sep</span>
+                </div>
+              </div>
+              <div class="cal-event-info">
+                <p class="cal-event-name">Pre-Registration Admin</p>
+                <span class="cal-tag gold">SEM2024</span>
+              </div>
+            </div>
+
+            <div class="cal-event">
+              <div class="cal-dates">
+                <div class="cal-date-badge">
+                  <span class="cdb-day">15</span>
+                  <span class="cdb-mon">Sep</span>
+                </div>
+                <div class="cal-date-badge secondary">
+                  <span class="cdb-day">30</span>
+                  <span class="cdb-mon">Sep</span>
+                </div>
+              </div>
+              <div class="cal-event-info">
+                <p class="cal-event-name">Mid-Semester Exams</p>
+                <span class="cal-tag red">SEM2024</span>
+              </div>
+            </div>
+
+            <div class="cal-event">
+              <div class="cal-dates">
+                <div class="cal-date-badge">
+                  <span class="cdb-day">10</span>
+                  <span class="cdb-mon">Nov</span>
+                </div>
+                <div class="cal-date-badge secondary">
+                  <span class="cdb-day">30</span>
+                  <span class="cdb-mon">Nov</span>
+                </div>
+              </div>
+              <div class="cal-event-info">
+                <p class="cal-event-name">End-Semester Exams</p>
+                <span class="cal-tag red">SEM2024</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
+    </div><!-- /dashboard-grid -->
+  </main>
+
+  <!-- Overlay for dropdowns -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
